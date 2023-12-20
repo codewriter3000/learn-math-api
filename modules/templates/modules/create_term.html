@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Learn Math | Create Term</title>
+</head>
+<body>
+<h1>Create Term</h1>
+<hr>
+<a href="/app/term_list">Term List</a>
+<form action="{% url '' %}" method="POST">
+    <label for="name">Name: </label>
+    <input type="text" name="name">
+    <br>
+    <label for="definition">Definition: </label>
+    <textarea name="definition"></textarea>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

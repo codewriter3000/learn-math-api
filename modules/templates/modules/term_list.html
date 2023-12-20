@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Learn Math | Term List</title>
+</head>
+<body>
+<h1>Term List</h1>
+<hr>
+<a href="/app">Back to Homepage</a>
+<a href="/modules/create_term">Create New Term</a>
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Definition</th>
+    </thead>
+    <tbody>
+    {% for term in terms %}
+        <tr>
+            <td>{{ term.name }}</td>
+            <td>{{ term.definition }}</td>
+        </tr>
+    {% endfor %}
+    <tr>
+        <td>Proposition</td>
+        <td>A declarative sentence (that is, a sentence that declares a fact) that is either true
+            or false, but not both.
+        </td>
+    </tr>
+    <tr>
+        <td>Propositional Variable</td>
+        <td>A variable that represents propositions, just as letters are used to denote numerical variables.
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
